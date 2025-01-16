@@ -10,7 +10,7 @@ datasource db {
 model ParkingSpot {
   id        Int      @id @default(autoincrement())
   status    String   @default("empty")
-  userId    Int?     @unique
+  userId    Int?
   user      User?    @relation(fields: [userId], references: [id])
   startTime DateTime?
 }
